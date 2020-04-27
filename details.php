@@ -134,6 +134,7 @@ $materialsError = ''; //as its just only one info (only materials, not email and
 
       <!-- Edit form -->
       <form class="form-parent mt-5 mb-5" action="details.php?id=<?php echo $_GET['id']?>" method="POST"> <!-- if the dit fails, then wanna load to the exact page associated with the id. thats why id was passed on the action-->
+        <input type="hidden" class="btn m-auto d-block" name="id_hidden" value="<?php echo $_GET['id']?> ">
         <div class="form-group">
           <label for="editmats">Edit the Materials (comma separated):</label>
           <input type="text" name="editmats" class="form-control shadow-none" id="editmats" rows="2" value="<?php echo $materials?>">
